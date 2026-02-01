@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#drum-machine {
+  background: #333;
+  padding: 30px;
+  border-radius: 15px;
+  border: 4px solid #444;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+  width: 100%;
+  max-width: 450px;
+}
+
+#display {
+  background: #000;
+  color: #ff9d00;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 2px solid #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#pad-bank {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.drum-pad {
+  background: #4a4a4a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  height: 80px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px #222;
+  transition: all 0.05s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover and Click effects */
+.drum-pad:hover {
+  background: #5a5a5a;
+}
+
+.drum-pad:active, .drum-pad.active {
+  box-shadow: 0 0px #222;
+  transform: translateY(5px);
+  background: #ff9d00;
+  color: #000;
+}
